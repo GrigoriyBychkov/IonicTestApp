@@ -5,5 +5,10 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item (click)="openProduct(item)" *ngFor="let item of list">
+      <ion-label>{{item.title}}</ion-label>
+      <ion-label>{{item.description}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

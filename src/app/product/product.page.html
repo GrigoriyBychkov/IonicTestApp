@@ -3,6 +3,59 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>product</ion-title>
+    <ion-title>Product</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-app>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>Card</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+    <ion-card [formGroup]="form">
+      <img src="{{data.imageUrl}}">
+      <ion-card-header>
+        <ion-card-title>{{data.title}}</ion-card-title>
+        <ion-card-subtitle>Price: {{data.price}}$</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        {{data.description}}
+      </ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <section>
+              <ion-button size="small" (click)="buttonsAmount(100)">100$</ion-button>
+              <ion-button size="small" (click)="buttonsAmount(10)">10$</ion-button>
+            </section>
+          </ion-col>
+          <ion-col>
+            <section>
+              <ion-button size="small" (click)="buttonsQuantity(2.2)">2.2 qty</ion-button>
+              <ion-button size="small" (click)="buttonsQuantity(9)">9 qty</ion-button>
+            </section>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="stacked">Amount</ion-label>
+                <ion-input type="number" formControlName="amount"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="stacked">Quantity</ion-label>
+                <ion-input type="number" formControlName="quantity"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-content>
+</ion-app>

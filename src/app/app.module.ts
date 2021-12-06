@@ -7,12 +7,18 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import {IonicStorageModule} from '@ionic/storage-angular';
+import {StorageService} from './services/storage.service';
+import { Drivers, Storage } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule,  IonicStorageModule.forRoot({
+    name: '__mydb',
+    driverOrder: [Drivers.LocalStorage]
+  })],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, StorageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

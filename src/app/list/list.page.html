@@ -1,14 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>list</ion-title>
+    <ion-title>Product List</ion-title>
+  </ion-toolbar>
+  <ion-toolbar [formGroup]="searchForm">
+    <ion-searchbar debounce="300" formControlName="word"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item (click)="openProduct(item)" *ngFor="let item of list">
-      <ion-label>{{item.title}}</ion-label>
-      <ion-label>{{item.description}}</ion-label>
+      <ion-avatar slot="start">
+        <img [src]="item.imageUrl">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.title}}</h2>
+        <h3>{{item.description}}</h3>
+        <h4>{{item.price}}$</h4>
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -2,31 +2,31 @@
   {
     "title": "Duracel AAA",
     "description": "Duracel AAA battery pack",
-    "imageUrl": "",
+    "imageUrl": "assets/productImage/battery1.jpg",
     "price": 1
   },
   {
     "title": "Duracel AAA2",
     "description": "Duracel AAA2 battery pack",
-    "imageUrl": "",
+    "imageUrl": "assets/productImage/battery1.jpg",
     "price": 5
   },
   {
     "title": "Duracel AAA3",
     "description": "Duracel AAA3 battery pack",
-    "imageUrl": "",
+    "imageUrl": "assets/productImage/battery1.jpg",
     "price": 10
   },
   {
     "title": "Duracel AAA4",
     "description": "Duracel AAA4 battery pack",
-    "imageUrl": "",
+    "imageUrl": "assets/productImage/battery1.jpg",
     "price": 15
   },
   {
     "title": "Duracel AAA5",
     "description": "Duracel AAA5 battery pack",
-    "imageUrl": "",
+    "imageUrl": "assets/productImage/battery1.jpg",
     "price": 20
   }
 ]
